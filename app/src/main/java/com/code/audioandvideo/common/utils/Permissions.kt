@@ -12,9 +12,9 @@ object Permissions {
     private const val PERMISSION_REQUEST_CODE = 1
 
     private val STORAGE_PERMISSION = arrayOf(
-        "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.RECORD_AUDIO"
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.RECORD_AUDIO
     )
 
     @RequiresApi(Build.VERSION_CODES.Q)
