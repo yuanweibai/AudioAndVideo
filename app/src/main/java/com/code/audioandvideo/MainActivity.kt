@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.code.audioandvideo.databinding.ActivityMainBinding
 import com.code.audioandvideo.record.first.DrawPictureActivity
+import com.code.audioandvideo.record.second.AudioRecordActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         viewBinding.drawPictureBtn.setOnClickListener {
             DrawPictureActivity.start(this)
+        }
+
+        viewBinding.recordAudioBtn.setOnClickListener {
+            AudioRecordActivity.start(this)
         }
     }
 }

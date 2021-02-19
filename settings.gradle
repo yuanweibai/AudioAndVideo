@@ -1,2 +1,5 @@
 rootProject.name = "AudioAndVideo"
-include ':app'
+include ':app',"LibCodeFly"
+
+project(':LibCodeFly').projectDir = new File('libs/LibCodeFly/lib')
+
