@@ -1,0 +1,3 @@
+[submodule "libs/LibCodeFly"]
+	path = libs/LibCodeFly
+	url = git@github.com:yuanweibai/CodeFly.git
