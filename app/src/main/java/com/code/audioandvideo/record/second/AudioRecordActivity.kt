@@ -27,25 +27,28 @@ class AudioRecordActivity : BaseActivity() {
         viewBinding = ActivityAudioRecordBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
-        viewBinding.startAudioRecordBtn.setOnClickListener {
-            AudioRecorder.startRecord()
-        }
-
-        viewBinding.pauseAudioRecordBtn.setOnClickListener {
-            AudioRecorder.pauseRecord()
-        }
-
-        viewBinding.stopAudioRecordBtn.setOnClickListener {
-            AudioRecorder.stopRecord()
-        }
-
-        viewBinding.playAudioRecordBtn.setOnClickListener {
-            if (audioFileName == null) {
-                return@setOnClickListener
+        viewBinding.run {
+            startAudioRecordBtn.setOnClickListener {
+//            AudioRecorder.startRecord()
+                audioRhythmView.startAnim()
             }
-            AudioRecorder.play(audioFileName!!)
-        }
 
+            pauseAudioRecordBtn.setOnClickListener {
+//            AudioRecorder.pauseRecord()
+                audioRhythmView2.setPerHeight(1f)
+            }
+
+            stopAudioRecordBtn.setOnClickListener {
+                AudioRecorder.stopRecord()
+            }
+
+            playAudioRecordBtn.setOnClickListener {
+                if (audioFileName == null) {
+                    return@setOnClickListener
+                }
+                AudioRecorder.play(audioFileName!!)
+            }
+        }
 
         Permissions.checkAndRequestPermissionForAudioRecord(this)
 
